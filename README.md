@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Babel Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern JavaScript와 JSX 코드를 실시간으로 변환해볼 수 있는 웹 기반 Babel 플레이그라운드입니다.
 
-## Available Scripts
+## 주요 기능
 
-In the project directory, you can run:
+### 1. Babel 실시간 변환
 
-### `npm start`
+- ES6+ 코드를 ES5로 변환
+- JSX를 순수 JavaScript로 변환
+- 실시간 코드 변환 결과 확인
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. 개발자 친화적 기능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Monaco 에디터 내장 (VS Code와 동일한 에디터)
+- 원클릭 코드 복사
+- 직관적인 Before/After 뷰
 
-### `npm test`
+### 3. 최적화된 사용자 경험
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 반응형 디자인 지원
+- 다크 테마 에디터
+- 직관적인 UI/UX
 
-### `npm run build`
+## 기술 스택
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- Babel (standalone)
+- Monaco Editor
+- NextUI
+- TailwindCSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 시작하기
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 저장소 클론
+git clone https://github.com/namsh1125/babel-playground.git
 
-### `npm run eject`
+# 디렉토리 이동
+cd babel-playground
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 의존성 설치
+pnpm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 개발 서버 실행
+pnpm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 사용 예시
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+다음과 같은 모던 JavaScript 코드를:
 
-## Learn More
+```javascript
+[1, 2, 3].map((n) => n + 1);
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+아래와 같이 변환합니다:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+"use strict";
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[1, 2, 3].map(function (n) {
+  return n + 1;
+});
+```
